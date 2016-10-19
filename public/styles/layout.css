@@ -10,16 +10,170 @@ html {
   box-sizing: inherit;
 }
 
+li {
+  list-style: none;
+
+}
+ul {
+  margin:0;
+  padding:0;
+}
 /*
  * Global layout stuff
  */
 
-body {
-  margin: 0;
-  color: #244751;
-  background-color: #eee;
+#nav-bar {
+  height: 80px;
+  background-color: #00a087;
+  color: #e8fdff;
+  width:100%;
+  position: fixed;
+  top:0px;
+  padding: 0em 2em;
 }
 
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  background-color: #eee;  
+}
+
+#nav-bar .logo {
+  height:80px;
+  width:80px;
+  float:left;
+}
+#nav-bar .header {
+  margin-left:10px;
+  font-size:2em;
+  float:left;
+  line-height:80px;
+}
+
+.container {
+  max-width: 800px;
+  width:100%;
+  margin: 80px;
+  margin:80px auto 0;
+  background-color: white;
+  padding: 55px;
+}
+.new-tweet{
+  background-color:rgba(232, 232, 232, 0.82);
+  max-width:450px;
+  width:100%;
+  margin:0px auto;
+  padding:10px;
+  border-radius:5px;
+  border:1px solid rgba(0, 0, 0, 0.22);
+}
+.new-tweet:hover{
+  border:1px solid black;
+}
+textarea {
+  max-width:428px;
+  width:100%;
+  padding-left:5px;
+  padding-top:5px;
+ 
+}
+.counter {
+  float: right;
+}
+.tweets {
+   border:1px solid rgba(0, 0, 0, 0.22);
+  border-radius:5px;
+}
+.tweets:hover {
+   border:1px solid black;
+  border-radius:5px;
+}
+#tweetContainer {
+  max-width:450px;
+  width:100%;
+  margin:10px auto;
+ 
+}
+#tweetContainer:hover {
+  max-width:450px;
+  width:100%;
+  margin:10px auto;
+ 
+  
+}
+.tweetList li {
+  margin-bottom:10px;
+
+}
+
+.new-tweet h2 {
+  border-bottom:1px solid black;
+}
+
+.tweetImg {
+  height:50px;
+  width:50px;
+  margin:7px 0 2px 7px;
+  border-radius:5px;
+}
+.tweet-header {
+  border-radius:5px;
+  background-color:#ececec; 
+
+}
+.tweet-username {
+  margin:0 5px;
+  color:rgba(36, 71, 81, 0.69);
+  position:relative;
+  bottom:26px;
+  display:inline-block;
+}
+.tweet-username:hover{
+  color:#244751;
+}
+.tweet-text {
+  padding-left:10px;
+  font-size:20px;
+}
+.tweet-footer {
+  padding-top:5px;
+  padding-left:5px;
+  padding-bottom:5px;
+  font-size:13px;
+  border-top:1px solid rgba(0, 0, 0, 0.22);
+}
+.composetweet {
+  color: #244751;
+}
+.atUser {
+  float:right;
+  padding-right:7px;
+  letter-spacing:1px;
+}
+.overlimit {
+  color:red;
+}
+.reshare {
+  float:right;
+  display:none;
+  padding-right:10px;
+}
+.show {
+  display:block;
+}
+.fa {
+  font-size:15px;
+}
+.fa-flag:hover {
+  color:#00a087;
+}
+.fa-retweet:hover {
+  color:#00a087;
+}
+.fa-heart:hover {
+  color:#00a087;
+}
 /*
+
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
