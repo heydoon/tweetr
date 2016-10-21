@@ -36,7 +36,7 @@ ul {
 body {
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
-  background-color: #eee;  
+  background-color: #f5f5f5;  
 }
 
 #nav-bar .logo {
@@ -56,24 +56,65 @@ body {
   width:100%;
   margin: 80px;
   margin:80px auto 0;
-  background-color: white;
-  padding: 55px;
+  background-color: #f5f5f5;
+}
+.side1Container {
+  position:absolute;
+  top:0px;
+  margin-left:188px;
+  height:1000px;
+  width:267px;
+
+}
+.leftSide {
+  position:fixed;
+  width:268px;
+  height:660px;
+  border-radius:5px;
+  margin-top:50px;
+  border:1px solid rgba(0,0,0,0.22);
+  float:left;
+  margin-top:75px;
+  padding:10px;
+}
+input {
+  cursor:pointer;
+  border:none;
+  border-radius:3px;
+  outline:none;
+  float:right;
+  width:237px;
+  height:32px;
+  margin-top:13px;
+  margin-right:13px;
+  font-size:20px;
+}
+input:hover {
+  cursor:pointer;
+  background-color:white;
+  border:none;
+  outline:none;
+  float:right;
+  width:237px;
+  height:30px;
 }
 .new-tweet{
   background-color:rgba(239, 239, 239, 0.8);
-  max-width:450px;
+  max-width:800px;
   width:100%;
   margin:0px auto;
   padding:10px;
-  border-radius:5px;
   border:1px solid rgba(0, 0, 0, 0.22);
   display:none;
+  border-radius:5px;
 }
 .new-tweet:hover{
   border:1px solid black;
 }
 textarea {
+  font-size:20px;
   max-width:428px;
+  max-height:128px;
   width:100%;
   padding-left:5px;
   padding-top:5px;
@@ -81,23 +122,26 @@ textarea {
 }
 .counter {
   float: right;
+  padding-right:26px;
+  padding-top:9px;
+  font-size:32px;
 }
 .tweets {
   border:1px solid rgba(0, 0, 0, 0.22);
   border-radius:5px;
+  background-color:white;
 }
 .tweets:hover {
   border:1px solid black;
   border-radius:5px;
 }
 #tweetContainer {
-  max-width:450px;
+  max-width:800px;
   width:100%;
   margin:10px auto;
  
 }
 #tweetContainer:hover {
-  max-width:450px;
   width:100%;
   margin:10px auto;
  
@@ -182,14 +226,14 @@ textarea {
 .composeButton {
   cursor:pointer;
   outline:none;
-  padding:15px;
+  padding:5px;
+  padding-right:10px;
   float:right;
   border:1px solid black;
-  margin-top:15px;
+  margin-top:20px;
   border-radius: 5px;
-  background-color:#ececec;
+  background-color:#f5f5f5;
   font-size:22px;
-  color:#00a087;
 }
 .composeButton:hover {
   background-color:white;
@@ -197,7 +241,7 @@ textarea {
 .composeButton i {
   color:#00a087;
   margin-right:5px;
-  font-size:20px;
+  font-size:21px;
 }
 
 
