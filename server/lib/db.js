@@ -3,21 +3,19 @@
 const MongoClient = require("mongodb").MongoClient;
 const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 const initialTweets = require("./tweets");
-
 let collections;
 
-MongoClient.connect(MONGODB_URI, (err, db) => {
 
-  collections = db.collection("tweets");
-
-  
-  });
 
 const dbMethods = {
-
-  saveTweet: (data) => {
-    collections.insert(data);
-    return true;
+  saveTweet: (data, callback) => {
+    collections.insertOne(data, (err, results) => {
+      if (err) {
+        console.log(err);
+      } 
+      callback(results);
+    });
+    
   },
 
   getTweets: (callback) => {
@@ -26,21 +24,17 @@ const dbMethods = {
       console.log(err)
     }
     callback(results);
+    });
 
-  });
-
+  } 
 }
 
-
-}
 module.exports = {
-
   connect: (onConnect) => {
-
-    onConnect(dbMethods);
-
+    MongoClient.connect(MONGODB_URI, (err, db) => {
+      collections = db.collection("tweets");
+      onConnect(dbMethods);
+    }); 
   }
-
-
 }
 

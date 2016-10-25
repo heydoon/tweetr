@@ -71,11 +71,12 @@ body {
   font-size: 21px; }
 
 .container {
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
+  padding-top:40px;
   margin: 80px;
   margin: 80px auto 0;
-  background-color: #f5f5f5; }
+  background-color: white; }
 
 input {
   cursor: pointer;
@@ -99,17 +100,6 @@ input:hover {
   width: 237px;
   height: 30px; }
 
-/*.leftSide {
-  position:fixed;
-  width:268px;
-  height:660px;
-  border-radius:5px;
-  margin-top:50px;
-  border:1px solid rgba(0,0,0,0.22);
-  float:left;
-  margin-top:75px;
-  padding:10px;
-}*/
 #nav-bar .logo {
   height: 80px;
   width: 80px;
@@ -123,7 +113,7 @@ input:hover {
 
 .new-tweet {
   background-color: rgba(239, 239, 239, 0.8);
-  max-width: 800px;
+  max-width: 450px;
   width: 100%;
   margin: 0px auto;
   padding: 10px;
@@ -173,7 +163,7 @@ textarea {
   background-color: white; }
 
 #tweetContainer {
-  max-width: 800px;
+  max-width: 450px;
   width: 100%;
   margin: 10px auto; }
 

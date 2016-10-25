@@ -9,12 +9,7 @@ module.exports = function(db) {
   tweets.get("/", function(req, res) {
     let tweets = db.getTweets((tweets) => {
       return res.json(tweets);
-
     });
-    // simulate delay
-    setTimeout(() => {
-      
-    }, 300);
   });
 
   tweets.post("/", function(req, res) {
@@ -31,8 +26,9 @@ module.exports = function(db) {
       },
       created_at: Date.now()
     };
-    db.saveTweet(tweet);
-    return res.send();
+    db.saveTweet(tweet,() => {
+      res.send();
+    });
   });
 
   return tweets;

@@ -72,4 +72,38 @@ $(function() {
     });
   }
 loadTweets(renderTweet);
+ $('.new-tweet form').on('submit', function (event) {
+    event.preventDefault();
+    formTextArea = $(this).find("textarea").val();
+    if (formTextArea !== null && formTextArea !== "" && formTextArea.length < 140) {
+      $.ajax({
+        method: 'post',
+        url: '/tweets',
+        data: $(this).serialize(),      
+      }).then(function(data) {
+        loadTweets(renderTweet);
+
+        $("textarea").val(" ");
+        $("textarea").focus();
+                           
+      }).fail(function(data) {
+        alert("Failed to tweet");
+      });
+    } 
+
+    if (formTextArea === null || formTextArea === ""){
+      alert("Please enter a tweet");
+    } else if (formTextArea.length > 140) {
+      alert("Only 140 characters allowed")
+    }
+
+  });
+
+  formTextAreaFocus = $(this).find("textarea");
+
+  $('.composeButton').on('click', function () {
+    $('.new-tweet').slideToggle();
+    $(formTextAreaFocus).focus();
+  });
 });
+
